@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konto löschen – ÖVTI</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #F4F6F3;
+    --surface: #FFFFFF;
+    --ink: #142420;
+    --ink-secondary: #4E5D57;
+    --ink-muted: #7C8A83;
+    --accent: #0E6B54;
+    --accent-ink: #073F31;
+    --accent-soft: #E1EEE8;
+    --border: rgba(20, 36, 32, 0.13);
+    --callout-bg: #FBF3E4;
+    --callout-border: #D9A441;
+    --callout-ink: #5B4210;
+    --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1613; --surface: #16201C; --ink: #EDEFEA; --ink-secondary: #AEBDB6;
+      --ink-muted: #7E8D86; --accent: #52D9AE; --accent-ink: #BFF3DF;
+      --accent-soft: rgba(82,217,174,0.14); --border: rgba(237,239,234,0.14);
+      --callout-bg: rgba(217,164,65,0.12); --callout-border: #D9A441; --callout-ink: #F0D9A6;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1613; --surface: #16201C; --ink: #EDEFEA; --ink-secondary: #AEBDB6;
+    --ink-muted: #7E8D86; --accent: #52D9AE; --accent-ink: #BFF3DF;
+    --accent-soft: rgba(82,217,174,0.14); --border: rgba(237,239,234,0.14);
+    --callout-bg: rgba(217,164,65,0.12); --callout-border: #D9A441; --callout-ink: #F0D9A6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.7; padding: 0 0 6rem; }
+  .shell { max-width: 700px; margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2 { font-family: var(--font-display); text-wrap: balance; color: var(--ink); }
+  a { color: var(--accent-ink); }
+  .mark { width: 40px; height: 40px; margin-bottom: 1.1rem; }
+  .mark circle, .mark path { stroke: var(--accent); }
+  .eyebrow { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); display: block; margin: 2.5rem 0 0.75rem; }
+  h1 { font-size: 30px; font-weight: 700; margin: 0 0 0.7rem; letter-spacing: -0.01em; }
+  .subtitle { color: var(--ink-secondary); font-size: 16px; margin: 0 0 2.5rem; max-width: 58ch; }
+
+  .steps { list-style: none; margin: 0 0 2rem; padding: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .steps li { display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.3rem; }
+  .steps .num { font-family: var(--font-mono); font-size: 13px; color: var(--accent-ink); background: var(--accent-soft); border-radius: 6px; padding: 0.1rem 0.5rem; height: fit-content; }
+  .steps p { margin: 0; font-family: var(--font-display); font-size: 15px; color: var(--ink); }
+  .steps p b { font-weight: 600; }
+
+  .contact-card { background: var(--accent-soft); border-radius: 12px; padding: 1.3rem 1.5rem; margin: 0 0 2rem; }
+  .contact-card .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); display: block; margin-bottom: 0.3rem; }
+  .contact-card .v { font-family: var(--font-display); font-size: 16px; color: var(--ink); }
+
+  section { margin-bottom: 2.2rem; }
+  section p, section ul { max-width: 64ch; }
+  section ul { padding-left: 1.2rem; }
+  section li { margin-bottom: 0.5rem; }
+
+  .callout { background: var(--callout-bg); border: 1px solid var(--callout-border); border-radius: 10px; padding: 0.9rem 1.1rem; margin: 0 0 2rem; font-family: var(--font-display); font-size: 13.5px; color: var(--callout-ink); line-height: 1.55; }
+
+  footer { max-width: 700px; margin: 3rem auto 0; padding: 1.5rem; font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <svg class="mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ÖVTI Zeichen">
+    <circle cx="22" cy="22" r="19" stroke-width="2.4"/>
+    <path d="M13 27 L22 15 L31 27" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="22" cy="15" r="2.6" fill="var(--accent)"/>
+  </svg>
+  <span class="eyebrow">ÖVTI · Österreichischer Verein für Technologie und Innovation</span>
+  <h1>Konto löschen</h1>
+  <p class="subtitle">So beantragst du die Löschung deines ÖVTI-App-Kontos und der zugehörigen Daten. Eine Löschung direkt in der App ist derzeit noch nicht eingebaut — der Antrag läuft aktuell per E-Mail.</p>
+
+  <ol class="steps">
+    <li><span class="num">1</span><p>Schreib eine E-Mail an <b>datenschutz@oevti.at</b> — von der E-Mail-Adresse aus, mit der du in der App registriert bist.</p></li>
+    <li><span class="num">2</span><p>Betreff: <b>„Kontolöschung ÖVTI-App“</b>. Ein Satz im Text reicht, z. B. „Bitte löscht mein App-Konto und meine Daten.“</p></li>
+    <li><span class="num">3</span><p>Wir bestätigen den Antrag und löschen dein Konto <b>innerhalb von 30 Tagen</b>.</p></li>
+  </ol>
+
+  <div class="contact-card">
+    <span class="k">Kontakt für Löschanfragen</span>
+    <span class="v"><a href="mailto:datenschutz@oevti.at">datenschutz@oevti.at</a></span>
+  </div>
+
+  <section>
+    <h2>Was wird gelöscht</h2>
+    <ul>
+      <li>Dein Konto (Login-Daten, Profilangaben wie Name, Geburtsdatum, Beruf, Interessen).</li>
+      <li>Von dir hochgeladene Fotos und Dateien (z. B. in Forumsbeiträgen, 3D-Druck-Einreichungen, Förderanträgen).</li>
+      <li>Deine privaten Nachrichten in Chats.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Was aus organisatorischen/rechtlichen Gründen bestehen bleiben kann</h2>
+    <ul>
+      <li>Beiträge in gemeinsamen Foren-Threads oder Projekt-Diskussionen können anonymisiert (ohne deinen Namen) bestehen bleiben, damit der Gesprächskontext für andere Mitglieder erhalten bleibt.</li>
+      <li>Finanz- bzw. förderrelevante Unterlagen (z. B. abgeschlossene Förderanträge), soweit der Verein gesetzlich zur Aufbewahrung verpflichtet ist.</li>
+    </ul>
+  </section>
+
+  <div class="callout">
+    Diese Seite betrifft ausschließlich das <b>ÖVTI-App-Konto</b>. Für eine allgemeine Vereinsmitgliedschaft wende dich zusätzlich an den Vorstand.
+  </div>
+
+  <footer>ÖVTI — Österreichischer Verein für Technologie und Innovation</footer>
+</div>
+</body>
+</html>
